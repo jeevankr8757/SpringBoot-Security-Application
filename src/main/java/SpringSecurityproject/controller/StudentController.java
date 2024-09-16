@@ -21,7 +21,7 @@ public class StudentController {
     public List<Students> getAllStudents() {
         return repo.findAll();
     }
-//
+
     @PreAuthorize("hasRole('USER')")
     @GetMapping("/students/{id}")
     public Students getStudent(@PathVariable int id) {
